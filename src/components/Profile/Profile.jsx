@@ -5,8 +5,7 @@ const Profile = (
         username,
         tag,
         location,
-        avatar,
-        stats
+        avatar
     }
 ) => (
 <div className="profile">
@@ -28,8 +27,7 @@ const Profile = (
         username: PropTypes.string,
         tag: PropTypes.string,
         location: PropTypes.string,
-        avatar: PropTypes.string,
-        stats: PropTypes.string,
+        avatar: PropTypes.string
     };
 
     export default Profile;
