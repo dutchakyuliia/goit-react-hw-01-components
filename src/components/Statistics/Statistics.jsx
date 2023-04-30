@@ -1,49 +1,25 @@
 import PropTypes from 'prop-types';
+import data from './data.json';
 
-const Statistics = (
-    {
-        title,
-        label,
-        percentage
-    }
-) => (<section className="statistics">
-    <h2 className="title"> {title}Upload stats</h2>
-
-    <ul className="stat-list">
-        <li className="item">
-            <span className="label">{label }</span>
-            <span className="percentage">{ percentage}</span>
-        </li>
-        <li className="item">
-            <span className="label">{ label}</span>
-            <span className="percentage">{ percentage}</span>
-        </li>
-        <li className="item">
-            <span className="label">{ label}</span>
-            <span className="percentage">{ percentage}</span>
-        </li>
-        <li className="item">
-            <span className="label">{label }</span>
-            <span className="percentage">{ percentage}</span>
-        </li>
-    </ul>
-</section>);
-// const Statistics = ({ users }) => (
-//   <ul>
-//     {users.map(user => (
-
-//         <li className="item"key={user.id} >
-//             <span className="label">{label }</span>
-//             <span className="percentage">{ percentage}</span>
-//         </li>
-//     ))}
-//   </ul>
-// );
+const Statistics = ({ title, stats }) => {
+  return (
+    <section className="statistics">
+      <h2 className="title"> {title}Upload stats</h2>
+      <ul className="stat-list">
+        {data.map(stat => (
+          <li className="item" key={stat.id}>
+            <span className="label"> {stat.label} </span>
+            <span className="percentage"> {stat.percentage} % </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+};
 
 Statistics.propTypes = {
-        title: PropTypes.string,
-        label: PropTypes.string,
-        percentage: PropTypes.number
-    };
+  title: PropTypes.string
+  
+};
 
 export default Statistics;
