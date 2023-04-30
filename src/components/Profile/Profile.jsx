@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
-
+import css from './Profile.module.css';
+import Stats from './Stats';
+import user from './user.json'
 const Profile = (
     {
         username,
@@ -9,16 +11,18 @@ const Profile = (
     }
 ) => (
 <div className="profile">
-  <div className="description">
+    <div className={css.description}>
     <img 
       src={avatar}
       alt="User avatar"
-      className="avatar"
+      className={css.avatar}
     />
-    <p  className="name">{username}</p>
-     <p  className="tag">{tag}</p>
-            <p className="location">{location}</p>
-            
+    <p  className={css.name}>{username}</p>
+     <p  className={css.tag}>@{tag}</p>
+            <p className={css.location}>{location}</p>
+     <Stats followers={user.stats.followers}
+        views={user.stats.views}
+        likes={user.stats.likes}/>
   </div>
 </div>
 );

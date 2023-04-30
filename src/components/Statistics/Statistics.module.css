@@ -1,0 +1,26 @@
+.statistics{
+    padding: 50px;
+}
+
+.title{
+font-size: 34px;
+}
+.list{
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+}
+
+.item{
+
+}
+
+.label{
+font-size: 20px;
+display: block;
+margin-bottom: 10px;
+}
+.percentage{
+font-size: 25px;
+}

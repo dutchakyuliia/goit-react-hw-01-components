@@ -1,13 +1,12 @@
 import TransactionHistory from './TransactionHistory';
-
+import css from './Transactions.module.css';
 const TransactionTable = () => {
-    console.log(1111)
     return (<table className="transaction-history">
         <thead>
             <tr>
-                <th>Type</th>
-                <th>Amount</th>
-                <th>Currency</th>
+                <th className={css.rowHead}>Type</th>
+                <th className={css.rowHead}>Amount</th>
+                <th className={css.rowHead}>Currency</th>
             </tr>
         </thead>
         <tbody>
