@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import css from './Profile.module.css';
 import Stats from './Stats';
-import user from './user.json'
 const Profile = (
     {
         username,
         tag,
         location,
-        avatar
+        avatar,
+        stats
     }
 ) => (
 <div className="profile">
@@ -20,18 +20,18 @@ const Profile = (
     <p  className={css.name}>{username}</p>
      <p  className={css.tag}>@{tag}</p>
             <p className={css.location}>{location}</p>
-     <Stats followers={user.stats.followers}
-        views={user.stats.views}
-        likes={user.stats.likes}/>
+     <Stats followers={stats.followers}
+        views={stats.views}
+        likes={stats.likes}/>
   </div>
 </div>
 );
 
     Profile.propTypes = {
-        username: PropTypes.string,
-        tag: PropTypes.string,
-        location: PropTypes.string,
-        avatar: PropTypes.string
+        username: PropTypes.string.isRequired,
+        tag: PropTypes.string.isRequired,
+        location: PropTypes.string.isRequired,
+        avatar: PropTypes.string.isRequired
     };
 
     export default Profile;
