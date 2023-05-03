@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import css from './FriendListItem.module.css'
 const FriendList = ({ friend }) => (
     <ul className={css.list}>
-    {' '}
-    {friend}
     <FriendListItem
       avatar={friends.avatar}
       name={friends.name}
